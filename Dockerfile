@@ -4,12 +4,8 @@ EXPOSE 1337
 
 WORKDIR /srv/app
 
-VOLUME [ "/srv/data" ]
+ADD /bin/docker-entrypoint.sh /usr/local/bin/
 
-COPY . /srv/app/
-
-RUN npm install
-
-RUN npm run build
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 CMD [ "npm", "run", "start" ]
