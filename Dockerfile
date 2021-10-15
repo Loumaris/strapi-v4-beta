@@ -8,4 +8,4 @@ ADD /bin/docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-CMD [ "npm", "run", "start" ]
+CMD [ "npm", "run", "develop" ]
